@@ -9,6 +9,8 @@ public class Main {
         expression = x/y;
         System.out.println(expression);
         System.out.println("I am a happy developer");
+        System.out.println("I love coding");
+        System.out.println("Let's push code");
     }
 }
 
