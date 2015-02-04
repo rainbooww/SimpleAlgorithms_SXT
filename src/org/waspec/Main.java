@@ -8,6 +8,7 @@ public class Main {
         double expression;
         expression = x/y;
         System.out.println(expression);
+        System.out.println("I am a happy developer");
     }
 }
 
