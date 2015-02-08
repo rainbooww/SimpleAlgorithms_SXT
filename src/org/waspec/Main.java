@@ -1,19 +1,17 @@
 package org.waspec;
 public class Main {
     public static void main(String[] args) {
-        double r =10;
-        double area = Calculator.getCircleArea(10);
-        System.out.println(area);
-
+        Calculator circle= new Calculator();
+        System.out.println(circle.getCircleArea());
     }
 }
 
     class Calculator {
-        double r;
-        static double getCircleArea(double r) {
-            double area;
-            return area = Math.PI * r * r;
-        }
+         double getCircleArea() {
+             double r=10;
+             double area;
+             return area= Math.PI * r * r;
+         }
     }
 
 
