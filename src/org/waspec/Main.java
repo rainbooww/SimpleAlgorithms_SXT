@@ -2,19 +2,16 @@ package org.waspec;
 
 public class Main {
     public static void main(String[] args) {
-        int [] myArray= {1,3,2,4,7,8,0,6};
-        int leftIndex=0;
-        int rightIndex= myArray.length-1;
-        while(leftIndex<=rightIndex){
-            int temp= myArray[leftIndex];
-            myArray[leftIndex]= myArray[rightIndex];
-            myArray[rightIndex]=temp;
-            leftIndex++;
-            rightIndex--;
-        }
-        System.out.println(myArray);
+        String[] a={"this","is","a","black","cat"};
+        for (int i = 0; i < a.length/2; i++) {
+           String temp= a[i];
+            a[i]=a[a.length-1-i];
+            a[a.length-1-i]= temp;
+            }
+        for(int i=0; i<a.length;i++)
+            System.out.print(a[i]+"");
+            }
         }
 
-        }
 
 
