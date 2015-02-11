@@ -2,30 +2,20 @@ package org.waspec;
 
 public class Main {
     public static void main(String[] args) {
-        char[] chars = "this is cat".toCharArray();
-        reversePart(chars, 0, chars.length - 1);
-        String string = new String(chars);
-        System.out.println(chars);
-    };
-
-        public static void reversePart(char[] charArray, int startIndex, int endIndex){
-            int leftIndex = startIndex;
-            int rightIndex = endIndex;
-            while (leftIndex<= rightIndex){
-            char temp= charArray[leftIndex];
-            charArray[leftIndex] = charArray[rightIndex];
-            charArray[rightIndex]=temp;
-            leftIndex++;
-            rightIndex--;
-            }
+        char[] chars = {'a', 'b', 'c'};
+        String result = new String(chars);
+        System.out.println(result);
     }
 }
+    /*0 static void main(String[] args) {
+        int n=8;
+        int[][]board = new int[n][n];
+        for (int row = 0; row <n ; row++) {
+            for (int cell = 0; cell <n ; cell++) {
+                board[row][cell]=10;
+            }
+        }*/
 
-
-class Student{
-public int score;
-
-}
 
 
 
