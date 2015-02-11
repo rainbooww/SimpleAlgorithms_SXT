@@ -2,16 +2,29 @@ package org.waspec;
 
 public class Main {
     public static void main(String[] args) {
-        int[][] board = new int[8][8];
-        for (int row = 0; row < 8; row++) {//行
-            for (int cell = 0; cell < 8; cell++) {
-                if ((row+cell)%2==0)
-                    System.out.print("x");
-                else System.out.print("o");
+        char[] chars = "this is cat".toCharArray();
+        reversePart(chars, 0, chars.length - 1);
+        String string = new String(chars);
+        System.out.println(chars);
+    };
+
+        public static void reversePart(char[] charArray, int startIndex, int endIndex){
+            int leftIndex = startIndex;
+            int rightIndex = endIndex;
+            while (leftIndex<= rightIndex){
+            char temp= charArray[leftIndex];
+            charArray[leftIndex] = charArray[rightIndex];
+            charArray[rightIndex]=temp;
+            leftIndex++;
+            rightIndex--;
             }
-            System.out.println();
-        }
     }
+}
+
+
+class Student{
+public int score;
+
 }
 
 
