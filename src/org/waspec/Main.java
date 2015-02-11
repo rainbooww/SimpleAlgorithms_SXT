@@ -2,27 +2,28 @@ package org.waspec;
 
 public class Main {
     public static void main (String[] args){
-       String [][] s;
-        s= new String[3][];
-        s[0]= new String[2];
-        s[1]= new String[3];
-        s[2]= new String[2];
-        for (int i = 0; i <s.length; i++) {
-            for (int j = 0; j <s[i].length ; j++) {
-                s[i][j]= new String(" my position is: "+i+","+j);
-            }
+        String[] s = {"Microsoft", "IBM", "Sun", "Oracle", "Apple"};
+        String [] sBak = new String [6];
+        System.arraycopy(s,0, sBak,0, s.length);
+
+        for (int i = 0; i <sBak.length ; i++) {
+            System.out.print(sBak[i]+" ");
         }
-        for (int i = 0; i < s.length; i++) {
-            for (int j = 0; j < s[i].length; j++) {
-                System.out.print(s[i][j] + " ");
+
+        System.out.println();
+        int[][] intArray = {{1,2},{1,2,3},{3,4}};
+        int[][] intArrayBak = new int[3][];
+        System.arraycopy(intArray,0,intArrayBak,0,intArray.length);
+        intArray[2][1] = 100;
+
+        for (int i = 0; i <intArray.length; i++) {
+            for (int j = 0; j <intArray[i].length; j++) {
+                System.out.print(intArray[i][j] + " ");
             }
             System.out.println();
         }
     }
-
 }
-
-
 
 
 
