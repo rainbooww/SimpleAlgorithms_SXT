@@ -9,6 +9,9 @@ public class Main {
         }
 
         for (Student finger: students){//finger=array copy
+            finger.score=finger.score+1;
+        }
+        for (Student finger:students){
             System.out.println(finger.score);
         }
     }
