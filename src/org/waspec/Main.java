@@ -2,25 +2,23 @@ package org.waspec;
 
 public class Main {
     public static void main(String[] args) {
-        Student[] students = new Student[10];
-        for (int i = 0; i < 10; i++) {
-            students[i]= new Student();
-            students[i].score = i * 10;
+        int[] myArray = {9, 9, 7, 7, 7, 5, 5, 5, 5, 5, 4, 3, 8, 8, 8, 8, 8, 8, 8, 8, 7, 7, 2, 2};
+        int count = 1;
+        int tempCount;
+        int most = myArray[0];
+        int temp = 0;
+        for (int i = 0; i < myArray.length - 1; i++) {
+            temp = myArray[i];
+            tempCount = 0;
+            for (int j = 1; j < myArray.length; j++) {
+                if (temp == myArray[j])
+                    tempCount++;
+            }
+            if (tempCount > count) {
+                most = temp;
+                count = tempCount;
+            }
         }
-
-        for (Student finger: students){//finger=array copy
-            finger.score=finger.score+1;
-        }
-        for (Student finger:students){
-            System.out.println(finger.score);
-        }
+        System.out.println(most);
     }
 }
-class Student {
-    public int score;
-        }
-
-
-
-
-
