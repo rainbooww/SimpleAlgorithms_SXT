@@ -2,31 +2,24 @@ package org.waspec;
 
 public class Main {
     public static void main(String[] args) {
-        int[] myArray = {9, 9, 7, 7, 7, 5, 5, 5, 5, 5, 4, 3, 8, 8, 8, 8, 8, 8, 8, 8, 7, 7, 2, 2};
-        int result = longestSubArrayLengh(myArray);
-        System.out.println((result));
-    }
-    public static int longestSubArrayLengh(int[] input){
+        int x = 100; //switch总要求精确值，用的少
+        switch (x) {//必须整数类型表达式
+            case 99:                         //case语句
+                System.out.println("差一点儿");
+                break;
+            case 80:
+                System.out.println("还差不少");
+                break;
+            case 60:
+                System.out.println("刚及格");
+                break;
+            case 40:
+                System.out.println("call your parent");
+                break;
+            default:
+                System.out.println("???");
+        }
 
-        if (input==null||input.length==0){
-            return 0;
-        }
-        int startIndex=0;
-        int endIndex=0;
-        int delta=0;// 变化亮
-        while(endIndex<input.length){
-            int temp=0;
-            if(input[endIndex]==input[startIndex]){
-                temp= endIndex-startIndex;
-                if(temp>delta){
-                    delta=temp;
-                }
-            }else{
-                startIndex= endIndex;
-            }
-            endIndex++;
-        }
-        return delta+1;
-        }
     }
+}
 
