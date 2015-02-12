@@ -2,24 +2,30 @@ package org.waspec;
 
 public class Main {
     public static void main(String[] args) {
-        int x = 100; //switch总要求精确值，用的少
-        switch (x) {//必须整数类型表达式
-            case 99:                         //case语句
-                System.out.println("差一点儿");
-                break;
-            case 80:
-                System.out.println("还差不少");
-                break;
-            case 60:
-                System.out.println("刚及格");
-                break;
-            case 40:
-                System.out.println("call your parent");
-                break;
-            default:
-                System.out.println("???");
-        }
+        int score = 100;
+        int x = (score-1)/20;
+            switch (x) {//必须整数类型表达式
 
+                case 0:
+                case 1:
+                    System.out.println("d");
+                    break;
+                case 2:
+                    System.out.println("c");
+                    break;
+                case 3:
+                    System.out.println("b");
+                    break;
+                case 4:
+                    System.out.println("a");
+                    break;
+                default:
+                    System.out.println("error");
+                    break;
+
+            }
+
+        }
     }
-}
+
 
