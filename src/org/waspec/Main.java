@@ -6,9 +6,8 @@ public class Main {
         for (int i = 0; i < myArray.length; i++) {
             myArray[i] = i * 10;
         }
-        for (int i = 0; i < myArray.length; i++) {
-            System.out.println(myArray[i]);
-
+        for (int finger: myArray){
+            System.out.println(finger);
         }
         }
 
