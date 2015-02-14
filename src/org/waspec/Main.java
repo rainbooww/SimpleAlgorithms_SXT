@@ -2,24 +2,29 @@ package org.waspec;
 
 public class Main {
     public static void main(String[] args) {
-        Zombie[] zombies = new Zombie[5];
-        for (int i = 0; i < zombies.length; i++) {
-            zombies[i]= new Zombie(i*100);
+        int[] a={1,1,2,2,3,3};
+        System.out.println(findMaxLength(a));
+    }
+
+    public static int findMaxLength(int[]a){
+        int startIndex=0;
+        int maxLen=0;
+        int i=0;
+        int currentLen=0;
+        for ( i = 1; i < a.length; i++) {
+            if (a[i]!=a[i-1]){
+                 currentLen= i-startIndex;
+                startIndex=i;
+                if (currentLen>maxLen){
+                    maxLen=currentLen;
+                }
+            }
         }
-        for (Zombie zombie: zombies) {
-            zombie.age += 10;
-        }
-        for (int i = 0; i < zombies.length; i++) {
-            System.out.println(zombies[i].age);
-        }
+           currentLen= i-startIndex;
+           if(currentLen>maxLen){
+               maxLen=currentLen;
+       }
+        return maxLen;
     }
 }
-    
-    
-class Zombie{
-    Zombie(int age){
-        this.age=age;
-    }
-    public int age;
-}
-    
+
